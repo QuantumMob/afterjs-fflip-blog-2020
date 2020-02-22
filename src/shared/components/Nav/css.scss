@@ -1,0 +1,98 @@
+@import '../../../variables';
+
+.nav {
+  @media screen and (min-width: $break-large) {
+    position: absolute;
+    z-index: 20;
+  }
+  & * {
+    font-size: 2.25rem;
+  }
+
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  ul, ul > li {
+    padding: 0px;
+    margin: 0px
+  }
+  ul {
+    width: 85%;
+    text-align: center;
+    @media screen and (min-width: $break-large) {
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1;
+  }
+  ul > li {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    margin: 0.25rem;
+    @media screen and (min-width: $break-large) {
+      display: inline;
+      height: 100%;
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+    background-color: $UI-dull-highlight;
+  }
+  ul > li > a {
+    // color: #fa5b2a;
+    color: $Text-highlight-high;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem 1.75rem;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-decoration: none !important;
+    width: 100%;
+    @media screen and (min-width: $break-large) {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      width: auto;
+    }
+    &:link span {
+      text-decoration: underline;
+    }
+    &:hover span {
+      text-decoration: none;
+    }
+    &:after, &:before{
+      font-size: 1.15rem;
+      line-height: 1;
+      vertical-align: middle;
+      text-decoration: none !important;
+    }
+    &:before{
+      content: '\25B6\00a0';
+      padding-right: 0.5rem;
+      @media screen and (min-width: $break-large) {
+        content: '\00a0\25B6\00a0';
+      }
+    }
+    &:after{
+      @media screen and (min-width: $break-large) {
+        content: '\00a0\00a0\00a0';
+      }
+    }
+    &:hover{
+      &:before {
+        @media screen and (min-width: $break-large) {
+          content: '\00a0\00a0\25B6';
+        }
+      }
+    }
+  }
+}

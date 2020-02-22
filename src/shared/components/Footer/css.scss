@@ -1,0 +1,106 @@
+@import '../../../variables';
+
+.footer {
+  height: $UI-footer-closed-height;
+  &.footer--is-open {
+    height: auto;
+  }
+  .footer--fixed-wrapper {
+    height: 100%;
+    @media screen and (min-width: $break-large) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+    }
+    box-sizing: border-box;
+
+    padding: 0 2rem 0;
+    border-radius: $UI-radius;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top: $UI-border-thickness solid $UI-secondary-highlight;
+    background-color: $UI-header-bg-colour;
+  }
+
+  .footer--content {
+    width: $UI-main-width;
+    margin-left: auto;
+    margin-right: auto;
+    & > h6 {
+      width: 100%;
+      text-align: right;
+      margin-top: 2.6rem;
+      margin-bottom: 1.6rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  ul.footer--widgets {
+    display: block;
+    float: right;
+    height: 45px;
+    margin-top: -35px;
+
+    & > li {
+      margin-left: 12px;
+      display: inline-block;
+    }
+    & > li > button {
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      border: 2px solid $UI-secondary-highlight;
+      background-color: $UI-highlight;
+      background-color: $UI-light-bg-colour;
+      box-shadow: -3px 3px 0px 2px $UI-bright-highlight;
+    }
+    & > li > button > label {
+
+    }
+  }
+  .footer--sub-footer {
+    padding-bottom: 2rem;
+    font-size: 1.1rem;
+     h6 {
+      font-size: 1.4rem;
+      padding-bottom: 0.6rem;
+    }
+  }
+  ul.footer--ty-links {
+    .footer--ty-link-note {
+      font-size: 0.8rem;
+    }
+    & > li {
+      margin-bottom: 0.2rem;
+    }
+    & > li > button {
+      & > span {
+        display: none;
+      }
+    }
+  }
+  &:not(.footer--is-open) {
+    .footer--sub-footer {
+      display: none;
+    }
+    .footer-widgets--close {
+      display: none;
+    }
+    .footer-widgets--open {
+
+    }
+  }
+  &.footer--is-open {
+    .footer--sub-footer {
+
+    }
+    .footer-widgets--close {
+
+    }
+    .footer-widgets--open {
+      display: none;
+    }
+  }
+}

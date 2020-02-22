@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# If error don't block the commit with `2>/dev/null`
+npm run lint:prod 2>/dev/null; exit 0

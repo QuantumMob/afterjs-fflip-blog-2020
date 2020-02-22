@@ -1,0 +1,180 @@
+@import '../../../variables';
+/*
+  https://codepen.io/nxworld/pen/oLdoWb
+  The ribbons */
+.corner-ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 900;
+
+  /* common */
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: block;
+    border: 5px solid $Highlight-hot-dull;
+  }
+  & > * {
+    position: absolute;
+    display: block;
+    width: 225px;
+    // padding: 15px 0;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    color: $Primary-readable;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* top left*/
+  &#{&}--top-left {
+    // top: -10px;
+    // left: -10px;
+    top: 0px;
+    left: 0px;
+  }
+  &#{&}--top-left::before,
+  &#{&}--top-left::after {
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+  &#{&}--top-left::before {
+    top: 0;
+    right: 0;
+  }
+  &#{&}--top-left::after {
+    bottom: 0;
+    left: 0;
+  }
+  &#{&}--top-left > * {
+    right: -25px;
+    top: 30px;
+    transform: rotate(-45deg);
+  }
+
+  /* top right*/
+  &#{&}--top-right {
+    // top: -10px;
+    // right: -10px;
+    top: 0px;
+    right: 0px;
+  }
+  &#{&}--top-right::before,
+  &#{&}--top-right::after {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border: none;
+    display: none;
+  }
+  &#{&}--top-right::before {
+    // top: 0;
+    // left: 0;
+  }
+  &#{&}--top-right::after {
+    // bottom: 0;
+    // right: 0;
+  }
+  &#{&}--top-right > * {
+    // left: -25px;
+    // top: 30px;
+    left: -16px;
+    top: 16px;
+    transform: rotate(45deg);
+  }
+
+  /* bottom left*/
+  &#{&}--bottom-left {
+    bottom: -10px;
+    left: -10px;
+  }
+  &#{&}--bottom-left::before,
+  &#{&}--bottom-left::after {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  &#{&}--bottom-left::before {
+    bottom: 0;
+    right: 0;
+  }
+  &#{&}--bottom-left::after {
+    top: 0;
+    left: 0;
+  }
+  &#{&}--bottom-left > * {
+    right: -25px;
+    bottom: 30px;
+    transform: rotate(225deg);
+  }
+
+  /* bottom right*/
+  &#{&}--bottom-right {
+    bottom: -10px;
+    right: -10px;
+  }
+  &#{&}--bottom-right::before,
+  &#{&}--bottom-right::after {
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+  &#{&}--bottom-right::before {
+    bottom: 0;
+    left: 0;
+  }
+  &#{&}--bottom-right::after {
+    top: 0;
+    right: 0;
+  }
+  &#{&}--bottom-right > * {
+    left: -25px;
+    bottom: 30px;
+    transform: rotate(-225deg);
+  }
+  &#{&}--muted {
+    a {
+      // border: 0.8rem solid $Highlight-hot-bright;
+      border-color: $Highlight-low-bright;
+      background-color: $Highlight-low;
+    }
+    a:hover {
+      border-color: $Highlight-high;
+      background-color: $Highlight-dark;
+    }
+  }
+  &#{&}--bright-highlight {
+    a {
+      // border: 0.8rem solid $Highlight-hot-bright;
+      border-color: $Highlight-hot-bright;
+      background-color: $Highlight-hot-bright-readable;
+    }
+    a:hover {
+      border-color: $Highlight-high;
+      background-color: $Highlight-dark;
+      &, & > * {
+        color: $Primary-muted;
+      }
+    }
+  }
+  &#{&}--muted,
+  &#{&}--bright-highlight {
+    a {
+      & > * {
+        font-weight: 700;
+      }
+      border-width: 0.8rem;
+      border-style: solid;
+      border-left: none;
+      border-right: none;
+      box-sizing: border-box;
+    }
+    a, a:active, a:link,a:visited {
+      &, & > * {
+        color: $Primary-readable;
+      }
+    }
+  }
+}

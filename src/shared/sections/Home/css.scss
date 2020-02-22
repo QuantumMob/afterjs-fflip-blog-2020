@@ -1,0 +1,14 @@
+@import '../../../variables';
+
+.home--canvas {
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-color: rgba($UI-highlight-dull, 0.21);
+  border-radius: $UI-radius;
+}
+.main--home {
+  & > section {
+    border-radius: $UI-radius;
+  }
+}

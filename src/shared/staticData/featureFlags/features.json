@@ -1,0 +1,16 @@
+[{
+  "id": "newsletterReferral",
+  "enabled": true
+},
+{
+  "id": "promoInventoryVisible",
+  "criteria": { "isSpecialProductPromo": true }
+},
+{
+  "id": "promoRibbonSplitA",
+  "criteria": { "isSpecialProductPromo": true, "ribbonVersion": 1 }
+},
+{
+  "id": "promoRibbonSplitB",
+  "criteria": { "isSpecialProductPromo": true, "ribbonVersion": 2 }
+}]

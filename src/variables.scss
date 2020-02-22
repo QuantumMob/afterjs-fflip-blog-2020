@@ -1,0 +1,91 @@
+$Theme-mode-target: #FFFFFF;
+$Theme-mode-target-text: #080808;
+$Theme-mode-target-readable: #F7F7F7;
+
+
+
+$Primary: #E2F2E2;
+$Primary-muted: #D9DED2;
+$Primary-readable: #E8F2E8;
+$Primary-brighest: #E6EFF7;
+
+$Highlight-high: #9BCCF7;
+$Highlight-high-dark: #8BB7DE;
+$Highlight-dark: #2A699E;
+$Highlight-low: #BE9744;
+$Highlight-low-bright: #BEAB83;
+$Highlight-low-dull: #AB9A76;
+$Highlight-warm: #FBCB6C;
+$Highlight-warm-dull: #E1B661;
+$Highlight-hot: #FA906F;
+$Highlight-hot-dull: #E2765C;
+$Highlight-hot-bright: #FC8367;
+$Highlight-hot-bright-readable: #E25331;
+
+// break point for desktop
+$break-large: 575px;
+
+// 'view wrapper'
+$UI-main-width: 85%;
+
+// header/footer styles
+$UI-radius: 40px;
+$UI-border-thickness: 8px;
+$UI-highlight: #AF57DB;
+$UI-highlight-dull: #C361F4;
+$UI-secondary-highlight: #3E729E;
+$UI-header-bg-colour: $Primary;
+
+$UI-dull-highlight: $Highlight-low;
+$UI-bright-highlight: $Highlight-high;
+
+// main content-type style
+$UI-content-width: 65%;
+$UI-light-bg-colour: $Primary-readable;
+$UI-content-radius: 26px;
+
+$UI-header-base-height: 178px;
+$UI-header-hero-height: $UI-header-base-height * 3;
+$UI-header-hero-lrg-height: 253px;
+$UI-footer-closed-height: 67px;
+
+
+$Text-highlight: $Highlight-hot-dull;
+$Text-highlight-muted: $Highlight-hot-bright-readable;
+$Text-highlight-high: $Primary-brighest;
+
+:export {
+  Theme-mode-target: $Theme-mode-target;
+  Theme-mode-target-text: $Theme-mode-target-text;
+  Theme-mode-target-readable: $Theme-mode-target-readable;
+
+  Primary: $Primary;
+  Primary-muted: $Primary-muted;
+  Primary-readable: $Primary-readable;
+  Primary-brighest: $Primary-brighest;
+
+  Highlight-high: $Highlight-high;
+  Highlight-high-dark: $Highlight-high-dark;
+  Highlight-dark: $Highlight-dark;
+  Highlight-low: $Highlight-low;
+  Highlight-low-bright: $Highlight-low-bright;
+  Highlight-low-dull: $Highlight-low-dull;
+  Highlight-warm: $Highlight-warm;
+  Highlight-warm-dull: $Highlight-warm-dull;
+  Highlight-hot: $Highlight-hot;
+  Highlight-hot-dull: $Highlight-hot-dull;
+  Highlight-hot-bright: $Highlight-hot-bright;
+  Highlight-hot-bright-readable: $Highlight-hot-bright-readable;
+
+  Text-highlight: $Text-highlight;
+  Text-highlight-muted: $Text-highlight-muted;
+  Text-highlight-high: $Text-highlight-high;
+
+  UI-highlight: $UI-highlight;
+  UI-highlight-dull: $UI-highlight-dull;
+  UI-secondary-highlight: $UI-secondary-highlight;
+  UI-header-bg-colour: $UI-header-bg-colour;
+  UI-dull-highlight: $UI-dull-highlight;
+  UI-bright-highlight: $UI-bright-highlight;
+  UI-light-bg-colour: $UI-light-bg-colour;
+}

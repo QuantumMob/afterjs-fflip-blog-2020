@@ -1,0 +1,141 @@
+@import '../variables';
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-image: url('../shared/assets/vichy.png');
+  background-color: $Primary-muted;
+}
+
+a, a:active, a:link {
+  color: $Text-highlight;
+}
+
+a:hover {
+  color: $Text-highlight-muted;
+}
+button.clean-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+div#root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  box-sizing: border-box;
+  & > {
+    flex: 0 0 auto;
+  }
+  @media screen and (min-width: $break-large) {
+    display: block;
+
+
+  }
+
+}
+p,
+ul, ol, li,
+dl, dt, dt,
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: 400;
+  font-style: normal;
+}
+ul, ol {
+  margin-left: 1.25rem;
+  padding-left: 1.25rem;
+}
+ul > li, ol > li {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+ul.clean-list,
+ol.clean-list {
+  &, & > li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.heading {
+  margin-top: 1rem;
+  &.heading--main {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+  }
+  &.heading--sub-main {
+    font-size: 3.7rem;
+    margin-bottom: 1.2rem;
+  }
+  &.heading--content {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+  }
+  &.heading--sub-content {
+    font-size: 2.3rem;
+    margin-bottom: 1.2rem;
+  }
+  &.heading--sub-minor {
+    font-size: 1.9rem;
+    margin-bottom: 1.2rem;
+  }
+  &.heading--minor {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+}
+.body-text {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  &,
+  & > li {
+    font-size: 1.4rem;
+  }
+}
+// a11y hidden
+.visually-hidden {
+  position: absolute !important;
+
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+}
+
+// form(y) stuff
+.form--button {
+  border-radius: 8px;
+  font-weight: 800;
+  &.form--button-alt {
+    background-color: $UI-highlight;
+    color: $Theme-mode-target;
+  }
+}
+
+@import './ui';

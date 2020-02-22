@@ -1,0 +1,79 @@
+{
+  "env": {
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "extends": [
+    "standard",
+    "eslint:recommended",
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:promise/recommended"
+  ],
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "promise",
+    "babel"
+  ],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "prefer-template": ["warn"],
+    "operator-linebreak": ["warn", "before"],
+    "space-before-function-paren": ["error", {
+      anonymous: "never",
+      named: "never",
+      asyncArrow: "always"
+    }],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "semi-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "comma-dangle": "error",
+    "semi-style": [
+      "error",
+      "last"
+    ],
+    "no-param-reassign": ["error", {
+      "props": true,
+      "ignorePropertyModificationsFor": [
+        "ctx",
+        "e",
+        "ev",
+        "evt",
+        "event",
+        "acc",
+        "req",
+        "res"
+      ]
+    }],
+    "import/no-unassigned-import": [
+      "error",
+      {
+        "allow": [
+          "**/*.scss",
+          "**/*.css"
+        ]
+      }
+    ]
+  },
+  "globals": {
+    "gtag": true,
+    "ga": true
+  }
+}
