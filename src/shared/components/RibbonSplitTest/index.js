@@ -7,10 +7,10 @@ const onClickHandler = () => {
   if (process.isBrowser && typeof gtag === 'function') {
     const { userFlags } = window.env;
     if (fflipUtils.isPromoRibbonSplitA(userFlags)) {
-      gtag('set', 'dimension5', 'YES');
+      gtag('event', 'page_view', { promoA: 'CLICKED' });
       return;
     }
-    gtag('set', 'dimension6', 'YES');
+    gtag('event', 'page_view', { promoB: 'CLICKED' });
   }
 };
 const RibbonSplitTest = () => {
@@ -25,9 +25,9 @@ const RibbonSplitTest = () => {
   if (!isRibbonA && !isRibbonB) {
     return null;
   } else if (isRibbonA) {
-    gtag('set', 'dimension3', 'YES');
+    gtag('event', 'page_view', { promoA: 'VIEWED' });
   } else if (isRibbonB) {
-    gtag('set', 'dimension4', 'YES');
+    gtag('event', 'page_view', { promoB: 'VIEWED' });
   }
   const ribbonClassName = fflipUtils.isPromoRibbonSplitA(userFlags) ? 'corner-ribbon--bright-highlight' : 'corner-ribbon--muted';
   const ribbonText = fflipUtils.isPromoRibbonSplitA(userFlags) ? 'New Inventory' : 'Limited Time Offer';

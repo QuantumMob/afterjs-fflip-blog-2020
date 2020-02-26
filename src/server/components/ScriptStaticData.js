@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import serialize from 'serialize-javascript';
 
 const ScriptStaticData = ({ data }) => {
-  console.log('data: ', data);
   const jsStr = `
 Object.defineProperty(window, 'env', {
   writeable: false,
