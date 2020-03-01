@@ -1,33 +1,11 @@
 // LINT-OFF REASON: Webpack isn't babel-safe but we want some help with rules
 /* eslint-disable import/no-commonjs, import/no-extraneous-dependencies */
-// const makeLoaderFinder = require('razzle-dev-utils/makeLoaderFinder');
-// const cssLoaderFinder = makeLoaderFinder('css-loader');
-// const paths = require('razzle/config/paths');
 
 const settingsConfig = require('./src/shared/staticData/settings.json');
 module.exports = {
   plugins: ['scss'],
   modify: (config, opts, webpack) => { // config, opts, webpack
     const { target } = opts;
-    // dev
-    // config.module.rules.push({
-    //     test: /\.(sa|sc|c)ss$/,
-    //     use: [
-    //       'style-loader',
-    //       cssLoader,
-    //       postCSSLoader,
-    //       sassLoader,
-    //     ]
-    //   });
-    //   appConfig.module.rules.push({
-    //     test: /\.(sa|sc|c)ss$/,
-    //     use: [
-    //       MiniCssExtractPlugin.loader,
-    //       cssLoader,
-    //       postCSSLoader,
-    //       sassLoader,
-    //     ],
-    //   });
 
     config.plugins.push(new webpack.DefinePlugin({
       'process.isBrowser': target === 'web' ? "!!(typeof window !== 'undefined')" : JSON.stringify(false)
